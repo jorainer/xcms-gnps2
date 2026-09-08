@@ -643,7 +643,7 @@ pdp <- PeakDensityParam(
 #' Simulate the correspondence on the second EIC
 col_peak <- col_sample[chromPeaks(eic_2)[, "sample"]]
 plotChromPeakDensity(eic_2, param = pdp, col = col_sample, peakCol = col_peak,
-                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 2)
+                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -669,7 +669,7 @@ and simulate the correspondence with these updated settings.
 #' Simulate using a larger value for `ppm`
 pdp@bw <- 5
 plotChromPeakDensity(eic_2, param = pdp, col = col_sample, peakCol = col_peak,
-                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 2)
+                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -683,7 +683,7 @@ features. We thus increase below `bw` to 7.
 #' Simulate using an evel larger value for `ppm`
 pdp@bw <- 7
 plotChromPeakDensity(eic_2, param = pdp, col = col_sample, peakCol = col_peak,
-                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 2)
+                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -922,7 +922,7 @@ col_peak <- col_sample[chromPeaks(eic_1_adj)[, "sample"]]
 #' Simulate the correspondence
 plotChromPeakDensity(eic_1_adj, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 2, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -936,7 +936,7 @@ second example EIC.
 col_peak <- col_sample[chromPeaks(eic_2_adj)[, "sample"]]
 plotChromPeakDensity(eic_2_adj, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -955,7 +955,7 @@ a <- chromatogram(mse, mz = mzr_1, rt = c(30, 150))
 col_peak <- col_sample[chromPeaks(a)[, "sample"]]
 plotChromPeakDensity(a, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -974,7 +974,7 @@ the value of `bw`. Below we simulate a correspondence using `bw = 3`.
 pdp@bw <- 3
 plotChromPeakDensity(a, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -990,7 +990,7 @@ from the second example EIC into a single feature.
 col_peak <- col_sample[chromPeaks(eic_2_adj)[, "sample"]]
 plotChromPeakDensity(eic_2_adj, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1021,7 +1021,7 @@ eic_1 <- chromatogram(mse, rt = rtr_1, mz = mzr_1)
 col_peak <- col_sample[chromPeaks(eic_1)[, "sample"]]
 plotChromPeakDensity(eic_1, col = col_sample, peakCol = col_peak,
                      peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2,
+                     peakPch = 16, cex = 1.5,
                      simulate = FALSE)
 grid()
 ```
@@ -1041,7 +1041,7 @@ eic_2 <- chromatogram(mse, rt = rtr_2, mz = mzr_2)
 col_peak <- col_sample[chromPeaks(eic_2)[, "sample"]]
 plotChromPeakDensity(eic_2, col = col_sample, peakCol = col_peak,
                      peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2,
+                     peakPch = 16, cex = 1.5,
                      simulate = FALSE)
 grid()
 ```
@@ -1060,7 +1060,7 @@ a <- chromatogram(mse, mz = mzr_1, rt = c(30, 150))
 col_peak <- col_sample[chromPeaks(a)[, "sample"]]
 plotChromPeakDensity(a, col = col_sample, peakCol = col_peak,
                      peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2,
+                     peakPch = 16, cex = 1.5,
                      simulate = FALSE)
 grid()
 ```

@@ -64,6 +64,10 @@ docker run -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:RELEASE_3_23
 - In the RStudio server version: open any of the Quarto files in the *vignettes*
   folder and evaluate the R code blocks in that document.
 
+⚠️ Any changes to a file in the docker image are transient. To keep any changes
+to the document it is suggested to download the respective file before closing
+the session.
+
 ℹ️ macOS users might need to emulate an AMD64 CPU to run the docker image:
 
 ```

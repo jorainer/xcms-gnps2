@@ -6,8 +6,8 @@
 [![DOI](https://zenodo.org/badge/1099034068.svg)](https://doi.org/10.5281/zenodo.17800013)
 
 This repository contains an example workflow for preprocessing and preparation
-of an LC-MS/MS data set for feature-based molecular networking (FBMN) with
-GNPS2.
+of an LC-MS/MS data set using *xcms* for feature-based molecular networking
+(FBMN) with GNPS2.
 
 ## Analysis workflow
 
@@ -23,10 +23,22 @@ at [https://youtu.be/yc6fsegFg-k](https://youtu.be/yc6fsegFg-k).
 
 ## 📌 Reproducibility & Usage
 
-The workflow is available as pre-rendered webpage
-[xcms4gnps](https://jorainer.github.io/xcms4gnps2). In addition, a
-[docker](https://docker.com) image is available allowing to run the workflow
-interactively:
+The current version of the workshop runs with packages from Bioconductor release
+3.23 with the exception of the *MsBackendMassIVE* package that needs to be
+installed from GitHub as it currently only available in Bioconductor development
+branch.
+
+There are 3 ways to use/read this workflow:
+
+### Reading
+
+The workflow is available as pre-rendered web page
+[xcms4gnps](https://jorainer.github.io/xcms4gnps2).
+
+### Interactive evaluation using Docker
+
+In addition, a [docker](https://docker.com) image is available allowing to run
+the workflow interactively:
 
 - If you don't already have, install [docker](https://www.docker.com/). Find
   installation information [here](https://docs.docker.com/desktop/).
@@ -34,14 +46,17 @@ interactively:
   tutorial e.g. from the command line with:
 
 ```
-docker pull jorainer/xcms4gnps2:latest
+docker pull jorainer/xcms4gnps2:RELEASE_3_23
 ```
 
-- Start the docker container, either through the Docker Desktop, or on the
+This installs a *docker image* with the correct R version, the required data
+files and Bioconductor packages to run this analysis.
+
+- Start the docker container, either through the Docker Desktop app, or on the
   command line with
 
 ```
-docker run -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:latest
+docker run -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:RELEASE_3_23
 ```
 
 - Enter [`http://localhost:8787`](http://localhost:8787) in a web browser and
@@ -55,6 +70,8 @@ docker run -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:latest
 docker pull --platform linux/amd64 jorainer/xcms4gnps2:latest
 docker run --platform linux/amd64 -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:latest
 ```
+
+### Interactive evaluation using local installation
 
 As an alternative to the docker-based workshop, it is also be possible to run
 and evaluate the workshop *natively* in a local R installation (R version >=

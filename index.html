@@ -106,6 +106,7 @@
 <li>Enter <a href="http://localhost:8787" class="external-link"><code>http://localhost:8787</code></a> in a web browser and log in with username <code>rstudio</code> and password <code>bioc</code>.</li>
 <li>In the RStudio server version: open any of the Quarto files in the <em>vignettes</em> folder and evaluate the R code blocks in that document.</li>
 </ul>
+<p>⚠️ Any changes to a file in the docker image are transient. To keep any changes to the document it is suggested to download the respective file before closing the session.</p>
 <p>ℹ️ macOS users might need to emulate an AMD64 CPU to run the docker image:</p>
 <pre><code>docker pull --platform linux/amd64 jorainer/xcms4gnps2:latest
 docker run --platform linux/amd64 -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:latest</code></pre>

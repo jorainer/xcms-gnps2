@@ -670,7 +670,7 @@ Figure 12: Chromatographic peak detection results on the second example EIC.
 <span><span class="co">#' Simulate the correspondence on the second EIC</span></span>
 <span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">eic_2</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_2</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>, peakCol <span class="op">=</span> <span class="va">col_peak</span>,</span>
-<span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>, peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>, peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-eic2-chrom-peak-density" class="quarto-float quarto-figure quarto-figure-center">
@@ -690,7 +690,7 @@ Figure 13: Correspondence analysis simulation on the second example EIC.
 <code class="sourceCode R"><span><span class="co">#' Simulate using a larger value for `ppm`</span></span>
 <span><span class="va">pdp</span><span class="op">@</span><span class="va">bw</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_2</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>, peakCol <span class="op">=</span> <span class="va">col_peak</span>,</span>
-<span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>, peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>, peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-eic2-chrom-peak-density-2" class="quarto-float quarto-figure quarto-figure-center">
@@ -709,7 +709,7 @@ Figure 14: Correspondence analysis simulation with <code>bw = 5</code>.
 <code class="sourceCode R"><span><span class="co">#' Simulate using an evel larger value for `ppm`</span></span>
 <span><span class="va">pdp</span><span class="op">@</span><span class="va">bw</span> <span class="op">&lt;-</span> <span class="fl">7</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_2</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>, peakCol <span class="op">=</span> <span class="va">col_peak</span>,</span>
-<span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>, peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>, peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-eic2-chrom-peak-density-3" class="quarto-float quarto-figure quarto-figure-center">
@@ -935,7 +935,7 @@ Figure 22: Second example EIC before (top) and after (bottom) retention time al
 <span><span class="co">#' Simulate the correspondence</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_1_adj</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>,</span>
 <span>                     peakCol <span class="op">=</span> <span class="va">col_peak</span>, peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">2</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-chrom-peak-density-eic1" class="quarto-float quarto-figure quarto-figure-center">
@@ -954,7 +954,7 @@ Figure 23: Simulation of correspondence analysis on the first example EIC.
 <code class="sourceCode R"><span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">eic_2_adj</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_2_adj</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>,</span>
 <span>                     peakCol <span class="op">=</span> <span class="va">col_peak</span>, peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-chrom-peak-density-eic2" class="quarto-float quarto-figure quarto-figure-center">
@@ -976,7 +976,7 @@ Figure 24: Simulation of correspondence analysis on the second example EIC.
 <span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">a</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>,</span>
 <span>                     peakCol <span class="op">=</span> <span class="va">col_peak</span>, peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-chrom-peak-density-other" class="quarto-float quarto-figure quarto-figure-center">
@@ -996,7 +996,7 @@ Figure 25: Simulation of correspondence analysis on an expanded RT window.
 <span><span class="va">pdp</span><span class="op">@</span><span class="va">bw</span> <span class="op">&lt;-</span> <span class="fl">3</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">a</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>,</span>
 <span>                     peakCol <span class="op">=</span> <span class="va">col_peak</span>, peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-chrom-peak-density-other-bw3" class="quarto-float quarto-figure quarto-figure-center">
@@ -1016,7 +1016,7 @@ Figure 26: Effect of changing to <code>bw = 3</code> for the correspondence ana
 <span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">eic_2_adj</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_2_adj</span>, param <span class="op">=</span> <span class="va">pdp</span>, col <span class="op">=</span> <span class="va">col_sample</span>,</span>
 <span>                     peakCol <span class="op">=</span> <span class="va">col_peak</span>, peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div id="fig-chrom-peak-density-eic2-bw3" class="quarto-float quarto-figure quarto-figure-center">
@@ -1045,7 +1045,7 @@ Figure 27: Effect of <code>bw = 3</code> on correspondence results of the secon
 <span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">eic_1</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_1</span>, col <span class="op">=</span> <span class="va">col_sample</span>, peakCol <span class="op">=</span> <span class="va">col_peak</span>,</span>
 <span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span>,</span>
 <span>                     simulate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
@@ -1069,7 +1069,7 @@ Figure 28: Correspondence results for the first example EIC.
 <span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">eic_2</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">eic_2</span>, col <span class="op">=</span> <span class="va">col_sample</span>, peakCol <span class="op">=</span> <span class="va">col_peak</span>,</span>
 <span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span>,</span>
 <span>                     simulate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
@@ -1092,7 +1092,7 @@ Figure 29: Correspondence results for the second example EIC.
 <span><span class="va">col_peak</span> <span class="op">&lt;-</span> <span class="va">col_sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/XCMSnExp-class.html" class="external-link">chromPeaks</a></span><span class="op">(</span><span class="va">a</span><span class="op">)</span><span class="op">[</span>, <span class="st">"sample"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/xcms/man/plotChromPeakDensity.html" class="external-link">plotChromPeakDensity</a></span><span class="op">(</span><span class="va">a</span>, col <span class="op">=</span> <span class="va">col_sample</span>, peakCol <span class="op">=</span> <span class="va">col_peak</span>,</span>
 <span>                     peakBg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="va">col_peak</span>, <span class="fl">40</span><span class="op">)</span>,</span>
-<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                     peakPch <span class="op">=</span> <span class="fl">16</span>, cex <span class="op">=</span> <span class="fl">1.5</span>,</span>
 <span>                     simulate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/grid.html" class="external-link">grid</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
@@ -1263,10 +1263,10 @@ MSV000090156_Interlab-LC-MS_Lab2_A15M_Pos_MS2_Rep3.mzML
 MSV000090156_Interlab-LC-MS_Lab2_A45M_Pos_MS2_Rep1.mzML
  ... 10 more files
 Processing:
- Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 05:36:40 2026]
- Filter: select MS level(s) 2 [Tue Sep  8 05:42:44 2026]
- Filter: select MS level(s) 2 [Tue Sep  8 05:42:46 2026]
- ...4 more processings. Use 'processingLog' to list all. </code></pre>
+ Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 09:13:00 2026]
+ Filter: select MS level(s) 2 [Tue Sep  8 09:18:23 2026]
+ Filter: select MS level(s) 2 [Tue Sep  8 09:18:24 2026]
+ ...2 more processings. Use 'processingLog' to list all. </code></pre>
 </div>
 </div>
 <p>We can have multiple, or no, MS2 spectra per feature:</p>
@@ -1358,10 +1358,10 @@ Figure 34: Pairwise spectra similarity between MS2 spectra of one feature.
 3091         2   749.801      3791
  ... 43 more variables/columns.
 Processing:
- Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 05:36:40 2026]
- Filter: select MS level(s) 2 [Tue Sep  8 05:42:44 2026]
- Filter: select MS level(s) 2 [Tue Sep  8 05:42:46 2026]
- ...5 more processings. Use 'processingLog' to list all. </code></pre>
+ Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 09:13:00 2026]
+ Filter: select MS level(s) 2 [Tue Sep  8 09:18:23 2026]
+ Filter: select MS level(s) 2 [Tue Sep  8 09:18:24 2026]
+ ...3 more processings. Use 'processingLog' to list all. </code></pre>
 </div>
 </div>
 <p>We have thus now one consensus spectrum per feature. A summary of the numbers of peaks per consensus spectrum is shown below.</p>
@@ -1413,10 +1413,10 @@ Figure 35: Consensus spectrum for the first feature.
 3089         2   749.801      3791
  ... 43 more variables/columns.
 Processing:
- Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 05:36:40 2026]
- Filter: select MS level(s) 2 [Tue Sep  8 05:42:44 2026]
- Filter: select MS level(s) 2 [Tue Sep  8 05:42:46 2026]
- ...5 more processings. Use 'processingLog' to list all. </code></pre>
+ Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 09:13:00 2026]
+ Filter: select MS level(s) 2 [Tue Sep  8 09:18:23 2026]
+ Filter: select MS level(s) 2 [Tue Sep  8 09:18:24 2026]
+ ...3 more processings. Use 'processingLog' to list all. </code></pre>
 </div>
 </div>
 <div>

@@ -696,7 +696,7 @@ pdp <- PeakDensityParam(
 #' Simulate the correspondence on the second EIC
 col_peak <- col_sample[chromPeaks(eic_2)[, "sample"]]
 plotChromPeakDensity(eic_2, param = pdp, col = col_sample, peakCol = col_peak,
-                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 2)
+                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -726,7 +726,7 @@ with these updated settings.
 #' Simulate using a larger value for `ppm`
 pdp@bw <- 5
 plotChromPeakDensity(eic_2, param = pdp, col = col_sample, peakCol = col_peak,
-                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 2)
+                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -742,7 +742,7 @@ separate features. We thus increase below `bw` to 7.
 #' Simulate using an evel larger value for `ppm`
 pdp@bw <- 7
 plotChromPeakDensity(eic_2, param = pdp, col = col_sample, peakCol = col_peak,
-                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 2)
+                     peakBg = paste0(col_peak, 40), peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1002,7 +1002,7 @@ col_peak <- col_sample[chromPeaks(eic_1_adj)[, "sample"]]
 #' Simulate the correspondence
 plotChromPeakDensity(eic_1_adj, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 2, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1019,7 +1019,7 @@ for the second example EIC.
 col_peak <- col_sample[chromPeaks(eic_2_adj)[, "sample"]]
 plotChromPeakDensity(eic_2_adj, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1042,7 +1042,7 @@ a <- chromatogram(mse, mz = mzr_1, rt = c(30, 150))
 col_peak <- col_sample[chromPeaks(a)[, "sample"]]
 plotChromPeakDensity(a, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1065,7 +1065,7 @@ a correspondence using `bw = 3`.
 pdp@bw <- 3
 plotChromPeakDensity(a, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1085,7 +1085,7 @@ feature.
 col_peak <- col_sample[chromPeaks(eic_2_adj)[, "sample"]]
 plotChromPeakDensity(eic_2_adj, param = pdp, col = col_sample,
                      peakCol = col_peak, peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2)
+                     peakPch = 16, cex = 1.5)
 grid()
 ```
 
@@ -1121,7 +1121,7 @@ eic_1 <- chromatogram(mse, rt = rtr_1, mz = mzr_1)
 col_peak <- col_sample[chromPeaks(eic_1)[, "sample"]]
 plotChromPeakDensity(eic_1, col = col_sample, peakCol = col_peak,
                      peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2,
+                     peakPch = 16, cex = 1.5,
                      simulate = FALSE)
 grid()
 ```
@@ -1144,7 +1144,7 @@ eic_2 <- chromatogram(mse, rt = rtr_2, mz = mzr_2)
 col_peak <- col_sample[chromPeaks(eic_2)[, "sample"]]
 plotChromPeakDensity(eic_2, col = col_sample, peakCol = col_peak,
                      peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2,
+                     peakPch = 16, cex = 1.5,
                      simulate = FALSE)
 grid()
 ```
@@ -1165,7 +1165,7 @@ a <- chromatogram(mse, mz = mzr_1, rt = c(30, 150))
 col_peak <- col_sample[chromPeaks(a)[, "sample"]]
 plotChromPeakDensity(a, col = col_sample, peakCol = col_peak,
                      peakBg = paste0(col_peak, 40),
-                     peakPch = 16, cex = 2,
+                     peakPch = 16, cex = 1.5,
                      simulate = FALSE)
 grid()
 ```
@@ -1378,10 +1378,10 @@ ms2
     MSV000090156_Interlab-LC-MS_Lab2_A45M_Pos_MS2_Rep1.mzML
      ... 10 more files
     Processing:
-     Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 05:36:40 2026]
-     Filter: select MS level(s) 2 [Tue Sep  8 05:42:44 2026]
-     Filter: select MS level(s) 2 [Tue Sep  8 05:42:46 2026]
-     ...4 more processings. Use 'processingLog' to list all. 
+     Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 09:13:00 2026]
+     Filter: select MS level(s) 2 [Tue Sep  8 09:18:23 2026]
+     Filter: select MS level(s) 2 [Tue Sep  8 09:18:24 2026]
+     ...2 more processings. Use 'processingLog' to list all. 
 
 We can have multiple, or no, MS2 spectra per feature:
 
@@ -1485,10 +1485,10 @@ ms2_cons
     3091         2   749.801      3791
      ... 43 more variables/columns.
     Processing:
-     Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 05:36:40 2026]
-     Filter: select MS level(s) 2 [Tue Sep  8 05:42:44 2026]
-     Filter: select MS level(s) 2 [Tue Sep  8 05:42:46 2026]
-     ...5 more processings. Use 'processingLog' to list all. 
+     Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 09:13:00 2026]
+     Filter: select MS level(s) 2 [Tue Sep  8 09:18:23 2026]
+     Filter: select MS level(s) 2 [Tue Sep  8 09:18:24 2026]
+     ...3 more processings. Use 'processingLog' to list all. 
 
 We have thus now one consensus spectrum per feature. A summary of the
 numbers of peaks per consensus spectrum is shown below.
@@ -1539,10 +1539,10 @@ ms2_cons
     3089         2   749.801      3791
      ... 43 more variables/columns.
     Processing:
-     Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 05:36:40 2026]
-     Filter: select MS level(s) 2 [Tue Sep  8 05:42:44 2026]
-     Filter: select MS level(s) 2 [Tue Sep  8 05:42:46 2026]
-     ...5 more processings. Use 'processingLog' to list all. 
+     Filter: select retention time [20..850] on MS level(s)  [Tue Sep  8 09:13:00 2026]
+     Filter: select MS level(s) 2 [Tue Sep  8 09:18:23 2026]
+     Filter: select MS level(s) 2 [Tue Sep  8 09:18:24 2026]
+     ...3 more processings. Use 'processingLog' to list all. 
 
 > **ℹ️ Additional spectra processing options**
 >

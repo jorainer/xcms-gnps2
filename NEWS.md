@@ -1,5 +1,11 @@
 # xcms-gnps2 version 1.1
 
+## Changes in version 1.1.3
+
+- Fix format and structure of the vignette.
+- Lock installation of *MsBackendMassIVE* to a specific version ensuring
+  reproducibility.
+
 ## Changes in version 1.1.2
 
 - Update for use with *MsBackendMassIVE* version 0.99.2 (to be released with

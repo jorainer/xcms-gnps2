@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">xcms4gnps2</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.3</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +65,7 @@
 <em>xcms</em>-based LC-MS/MS data preprocessing for FBMN with GNPS2<a class="anchor" aria-label="anchor" href="#xcms-based-lc-msms-data-preprocessing-for-fbmn-with-gnps2"></a>
 </h1></div>
 <p><a href="https://creativecommons.org/licenses/by-nc/4.0/" class="external-link"><img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a><br><a href="https://hub.docker.com/repository/docker/jorainer/xcms4gnps2" class="external-link"><img src="https://img.shields.io/docker/v/jorainer/xcms4gnps2?label=docker%20image" alt="Docker Image Version (latest by date)"></a><br><a href="https://doi.org/10.5281/zenodo.17800013" class="external-link"><img src="https://zenodo.org/badge/1099034068.svg" alt="DOI"></a></p>
-<p>This repository contains an example workflow for preprocessing and preparation of an LC-MS/MS data set for feature-based molecular networking (FBMN) with GNPS2.</p>
+<p>This repository contains an example workflow for preprocessing and preparation of an LC-MS/MS data set using <em>xcms</em> for feature-based molecular networking (FBMN) with GNPS2.</p>
 <div class="section level2">
 <h2 id="analysis-workflow">Analysis workflow<a class="anchor" aria-label="anchor" href="#analysis-workflow"></a>
 </h2>
@@ -81,16 +81,27 @@
 <div class="section level2">
 <h2 id="pushpin-reproducibility--usage">📌 Reproducibility &amp; Usage<a class="anchor" aria-label="anchor" href="#pushpin-reproducibility--usage"></a>
 </h2>
-<p>The workflow is available as pre-rendered webpage <a href="https://jorainer.github.io/xcms4gnps2">xcms4gnps</a>. In addition, a <a href="https://docker.com" class="external-link">docker</a> image is available allowing to run the workflow interactively:</p>
+<p>The current version of the workshop runs with packages from Bioconductor release 3.23 with the exception of the <em>MsBackendMassIVE</em> package that needs to be installed from GitHub as it currently only available in Bioconductor development branch.</p>
+<p>There are 3 ways to use/read this workflow:</p>
+<div class="section level3">
+<h3 id="reading">Reading<a class="anchor" aria-label="anchor" href="#reading"></a>
+</h3>
+<p>The workflow is available as pre-rendered web page <a href="https://jorainer.github.io/xcms4gnps2">xcms4gnps</a>.</p>
+</div>
+<div class="section level3">
+<h3 id="interactive-evaluation-using-docker">Interactive evaluation using Docker<a class="anchor" aria-label="anchor" href="#interactive-evaluation-using-docker"></a>
+</h3>
+<p>In addition, a <a href="https://docker.com" class="external-link">docker</a> image is available allowing to run the workflow interactively:</p>
 <ul>
 <li>If you don’t already have, install <a href="https://www.docker.com/" class="external-link">docker</a>. Find installation information <a href="https://docs.docker.com/desktop/" class="external-link">here</a>.</li>
 <li>Get the <a href="https://hub.docker.com/r/jorainer/xcms4gnps2" class="external-link">docker image</a> of this tutorial e.g. from the command line with:</li>
 </ul>
-<pre><code>docker pull jorainer/xcms4gnps2:latest</code></pre>
+<pre><code>docker pull jorainer/xcms4gnps2:RELEASE_3_23</code></pre>
+<p>This installs a <em>docker image</em> with the correct R version, the required data files and Bioconductor packages to run this analysis.</p>
 <ul>
-<li>Start the docker container, either through the Docker Desktop, or on the command line with</li>
+<li>Start the docker container, either through the Docker Desktop app, or on the command line with</li>
 </ul>
-<pre><code>docker run -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:latest</code></pre>
+<pre><code>docker run -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:RELEASE_3_23</code></pre>
 <ul>
 <li>Enter <a href="http://localhost:8787" class="external-link"><code>http://localhost:8787</code></a> in a web browser and log in with username <code>rstudio</code> and password <code>bioc</code>.</li>
 <li>In the RStudio server version: open any of the Quarto files in the <em>vignettes</em> folder and evaluate the R code blocks in that document.</li>
@@ -98,6 +109,10 @@
 <p>ℹ️ macOS users might need to emulate an AMD64 CPU to run the docker image:</p>
 <pre><code>docker pull --platform linux/amd64 jorainer/xcms4gnps2:latest
 docker run --platform linux/amd64 -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gnps2:latest</code></pre>
+</div>
+<div class="section level3">
+<h3 id="interactive-evaluation-using-local-installation">Interactive evaluation using local installation<a class="anchor" aria-label="anchor" href="#interactive-evaluation-using-local-installation"></a>
+</h3>
 <p>As an alternative to the docker-based workshop, it is also be possible to run and evaluate the workshop <em>natively</em> in a local R installation (R version &gt;= 4.6):</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#' install the workshop and all required dependencies</span></span>
@@ -105,6 +120,7 @@ docker run --platform linux/amd64 -e PASSWORD=bioc -p 8787:8787 jorainer/xcms4gn
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"jorainer/xcms4gnps2"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"RforMassSpectrometry/MsBackendMassIVE"</span><span class="op">)</span></span></code></pre></div>
 <p>The <a href="vignettes/MSV000090156-preprocessing.qmd"><em>vignettes/MSV000090156-preprocessing.qmd</em></a> file could then be opened with any editor (after downloading locally) and the individual code lines evaluated in an R session.</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="handshake-contribution">🤝 Contribution<a class="anchor" aria-label="anchor" href="#handshake-contribution"></a>
